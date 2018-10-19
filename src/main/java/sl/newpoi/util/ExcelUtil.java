@@ -25,7 +25,7 @@ public class ExcelUtil {
     /**
      * 导出用户的所有列表到excel
      *
-     * @param personList   用户列表
+     * @param personList  用户列表
      * @param outputStream 输出流
      */
     public static void exportUserExcel(List<Person> personList, ServletOutputStream outputStream) {
