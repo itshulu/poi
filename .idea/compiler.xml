@@ -9,5 +9,8 @@
         <module name="poi" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="poi" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

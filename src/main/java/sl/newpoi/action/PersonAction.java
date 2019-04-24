@@ -10,6 +10,7 @@ import sl.newpoi.service.PersonService;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -58,7 +59,7 @@ public class PersonAction extends ActionSupport {
             //2、导出
             HttpServletResponse response = ServletActionContext.getResponse();
             response.setContentType("application/x-execl");
-            response.setHeader("Content-Disposition", "attachment;filename=" + new String("用户列表.xls".getBytes(), "ISO-8859-1"));
+            response.setHeader("Content-Disposition", "attachment;filename=" + new String("用户列表.xls".getBytes(), StandardCharsets.ISO_8859_1));
             ServletOutputStream outputStream = response.getOutputStream();
             personService.exportExcel(personList, outputStream);
             if (outputStream != null) {
